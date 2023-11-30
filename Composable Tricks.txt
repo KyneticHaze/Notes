@@ -1,0 +1,41 @@
+* Composable Trick
+
+
+Composable parameter func
+
+- Bir composable function parametresi olarak bir lambda fonksiyon verdiğimizde ki bu fonksyion basit halde şöyle gösterilir -> () -> Unit 
+
+- Eğer parametre fonksiyonun içerisinde parametre ile bir işlem yapılacaksa parantezin içersine o işlem yapılacak parametrenin türünü yazarız. Mesela renk ile ilgili bir işlem  
+
+yapılacak ise şu şekilde yazarız -> (Color) -> Unit
+
+- Buradaki Unit parametre fonksiyonun bir dönüş değerinin olmaması anlamına geliyor. Eğer yazacağımız parametre fonksiyonunun bir dönüş değerine ihtiyacımız var ise onu da 
+
+tipine göre yazarız. Şu şekilde bir örnek verilebilir -> (Color) -> String 
+
+
+.weight() -> Bir görünümün içine iki görünüm koyduğumuzda aralarında yer kaplama derecesini bu metot belirler. Modifier'ın bir methodudur.
+
+- composable'ların recomposition olduklarında değerlerini korumaları için remember'ı rememberSaveble { } yaparız.
+
+
+		* Compose Animation *
+
+- animate*AsState -> * yerine dp, color, float, int, rect, offset getirilebilir.
+
+- animationSpec -> parametresi animasyonu nasıl yapcağımızı belirttiğimiz yerdir.
+
+- animationSpec parametresine tween() veya sprint() gibi fonksiyonlar girebiliriz.
+
+- tween() fonksiyonu içine yazılan durationMillis = animasyon süresi, delayMillis = animasyon gecikme süresi, easing = animasyon gerçekleşme şekli. Şeklinde açıklanabilir bu fonksiyon.
+
+
+- spring() -> 	dampingRatio: Yayın yayılma oranını belirtir. Yüksek bir damping ratio, yayın daha hızlı durmasına 		neden olur. Spring.DampingRatioNoBouncy ve Spring.DampingRatioHighBouncy gibi önceden tanımlanmış 		değerler kullanılabilir.
+
+		stiffness: Yayın sertliğini belirtir. Daha yüksek bir sertlik, yayın daha hızlı titreşmesine ve 		daha hızlı durmasına neden olur. Spring.StiffnessLow ve Spring.StiffnessHigh gibi önceden 			tanımlanmış değerler kullanılabilir.
+
+		visibilityThreshold: Bu, animasyonun ne zaman başlayacağını belirlemek için kullanılır. Örneğin, 		bir öğe belirli bir görünürlük eşiğine ulaştığında animasyonu başlatmak istiyorsanız bu değeri 			kullanabilirsiniz.
+
+- infiniteTransition -> Sonsuz geçiş animasyonu gibi çevrilebilir. rememberInfiniteTransition() değerini bir değişkene atıyoruz. Değişkene animateColor, animateValue, animateFloat şeklinde extension function yazıyoruz ve o bize başlangıç değeri hedef değeri ve animasyon şeklini soruyor. Animasyon şeklini infiniteRepeatable() şeklinde yazıyoruz. Animasyon ve repeat parametreleri var onun da. Animasyon için tween ile animasyon süresini yazabiliyoruz. Repeat için repateMode'da iki seçenek var -> Restart ve Reverse. Restart'da bitince tekrar başlıyor, Reverse'de sürekli dönüyor.
+
+- Path() ??

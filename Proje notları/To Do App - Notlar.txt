@@ -1,0 +1,22 @@
+To Do App - Notlar
+
+- Channel sınıfı?
+
+- .receiveAsFlow()?
+
+- send()?
+
+- Kullanıcı arayüzü eylemlerini ve uygulamanın bileşenlerinin eylemlerini yazmak bir prensiptir. 
+
+- Navigasyon ile id gönderme veya veri taşımayı iyice öğrenmem lazım. (Bu epey elzem!!!)
+
+
+		* Geliştirme Trickleri *
+
+- Genelde viewmodelde bir onEvent methodu bulunur ve parametre olarak sealed class olarak oluşturduğumuz ayrı bir event sınıfının tipinden bir event parametresi alır.
+
+- Bu parametre ile bir when döngüsü yazarız ve event sealed class'ı içinde yazılan farklı eylemleri görünüme uygun düşecek şekilde güç veririz. Mesela event sınıfının içinde not ekleme data sınfı varsa when döngüsü ile event.not ekleme'ye eşit olan blok içerisinde bir insert methodu yazabiliriz. Bu da yazdığımız ekleme data class'a bir güç verdiğimiz anlamına gelir. Birkaç projede karşılaştığım yöntem bu.
+
+- Her bir viewmodelin bir eventi oluyor ve gözlemlenecek bir verinin tipi ayrı şekilde oluşturduğumuz bir veri state'i data class'ımız oluyor(bu opsiyonel). viewmodel'de yani görünüme aktaracağımız şeyleri bizim bir algoritma ile belirlediğimiz bu sınıflarda o görünüm durumlarına uygun güçler veriyoruz bu data ve sealed sınıfları ile.
+
+- Bu sealed sınıfları, durumları veya eylemleri anlamakta ve takip etmekte bize büyük fayda sağlıyor. Bunları öğrenmeye ve üstüne fikir katmak geliştiricinin geliştirme akıbeti açısından büyük önem taşıyor.

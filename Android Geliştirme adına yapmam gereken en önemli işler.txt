@@ -1,0 +1,8 @@
+Android Geliştirme adına yapmam gereken en önemli işler
+
+- Uygulama bileşenlerine hakim olmak
+- Compose ile daha iyi uygulama arayüzleri tasarlamaya çalışmak
+- Kotlin dil yapısını gelişmiş düzeyde bilmek
+- Jetpack kütüphanelerini uygulama geliştirmelerinde sıkça kullanmak
+- Bolca kod pratiği yapıp uygulama mimarileri üstüne düşünmek
+- Farklı kodlar görerek, okuyarak kodlama ufkumu geliştirmek

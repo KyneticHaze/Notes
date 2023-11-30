@@ -1,0 +1,19 @@
+KDoc
+
+Kotlin için doküman yazımı
+
+@param -> işlevin parametrelerini belirtir
+
+@author -> dokümanın yazarını belirtir
+
+@see -> işleve veya sınıfa "ayrıca bakınız" linki ekler
+
+@since -> belgenin yazılım sürümünü belirtir
+
+@property -> sınıf niteliklerini belirtir
+
+@constructor -> sınıfın birincil kutusunu belirtir
+
+@return -> fonksiyonun geri dönüş değerini belirtir
+
+@receiver -> extension fonksiyonun kim için yazıldığını belirtir

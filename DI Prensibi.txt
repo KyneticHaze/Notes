@@ -1,0 +1,9 @@
+DI Prensibi
+
+Bir nesneyi ya da sınıfı olabildiğince bağımsızlaştırmaya çalışan bir programlama prensibi
+
+Avantajı
+
+- bileşenlerin gevşek bağlı olması, geliştirme ve test etme açısından önemlidir. DI, bunu sağlar
+
+Uygulanması için bir bağımlılıktan söz edilmeli

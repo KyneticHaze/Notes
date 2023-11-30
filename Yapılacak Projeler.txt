@@ -1,0 +1,7 @@
+Yapılacak Projeler
+
+- Weather App
+
+- Stock Market App
+
+- Kotlin KMM Udemy 

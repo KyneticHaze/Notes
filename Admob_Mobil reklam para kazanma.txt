@@ -1,0 +1,21 @@
+Admob (Mobil reklam para kazanma)
+
+- Admob hesabı aç ve uygulama oluştur.
+
+- Uygulama kimliğini android manifestte uygun biçimde yerleştir.(Öğrenmek için google admob)
+
+- Admob bağımlılıklarını gradle'a ekle
+
+- Sayfa içine MobileAds.initialize(this) {} yaz.
+
+- Reklam çeşidini seç. Banner, interstitial, yerel biçim, ödül reklamları
+
+- Dokumantasyonda gerekli reklam kodalarını al. AdView layout parçacığını layout'a yerleştir.
+
+- AdSize boyutunu tercihine göre değiştir.
+
+- Reklam aksiyonları için AdListener arayüzünü ekle
+
+- Bundan önce adView layout'una reklamı load etmek için AdRequest.Builder().build() ile inşa et ve myAdView layout değişkenine myAdView.loadAd'i ekle
+
+- Interstitial reklamlar ekranı kaplayan reklamlar olduğu için kullanıcının karşısına bir anda çıkarmak mantıklı değil. Bunun yerine seviye geçtikçe gösterilebilir. Zaten diğer türlü google izin vermez.

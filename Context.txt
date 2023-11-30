@@ -1,0 +1,20 @@
+- Context -
+
+Nedir bu Context?
+
+- Context, uygulamanın global bilgilerine erişim sağlayan android sınıfıdır.
+
+- Bir bakıma uygulamanın içinde bulunduğu durumu ve çevreyi temsil eder.
+
+* Context Kullanımları
+
+1) Layout Inflation -> Xml dosyalarındaki düzenleri, kullanıcı arayüzünde kullanılan bileşenleri java/kotlin nesnelerine dönüştürmeye yarar.
+
+2) Resource -> Uygulama kaynaklarına(resimler,metinler) erişmeye yarar.
+
+3) Shared Preferences -> Kullanıcı tercih verilerine erişmek ve kaydetmeye yarar.
+
+4) Starting Activities -> Yeni bir aktivite başlatmak için gereklidir.
+
+5) Broadcast Receiver -> Broadcast mesajlarını yayınlamak ve almak için kullanılır.
+

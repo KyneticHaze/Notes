@@ -1,0 +1,20 @@
+Kotlin Function
+
+- Lambda Fun
+
+val waterFilter: (Int) -> Int = { level -> level / 2 }
+
+* tip belirtilmeyen fun
+
+val waterFilter = { level: (Int) -> level / 2 }
+
+- High Order fun
+
+* Parametre olarak verilen fonksiyonun; parametre ve dönüş tipi, ana fonksiyona argüman olarak kullandığında uyumlu olmalı.
+
+- bir fonksiyonu bir başka fonksiyona referans vermek için -> ::fonksiyonIsmi
+
+- fonksiyon parametresine lambda fonksiyonunu bir parametre şeklinde verebiliriz. -> encodeMsg("Patika", { input -> input.uppercase() }
+
+
+

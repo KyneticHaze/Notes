@@ -1,0 +1,35 @@
+Git ile alakalı ufak notlar
+
+Pull request -> Farklı branch'teki işlemlerimizi projenin ana kodcusuna istek atarak kabul ettirmektir.
+
+git pull -> git fetch + merge
+
+projeyi eksiksiz çekmek için git pull
+
+
+
+		* Conventional Commit *
+
+- feat:  -> :sparkles:
+
+- inital commit:  -> :tada:
+
+- refactor:  -> :package:
+
+- fix:  -> :bug:
+
+- docs:  -> :books:
+
+- style:  -> :gem:
+
+- perf:  -> rocket:
+
+- test:  -> :rotating_light:
+
+- build:  -> :hammer_and_wrench:
+
+- revert:  -> :wastebasket:
+
+- chore:  -> src ve test dosyalarını etkilemeyen değişiklikler -> :recycle:
+
+- dependencies:  -> :arrow_double_up:

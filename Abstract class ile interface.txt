@@ -1,0 +1,18 @@
+Abstract class ile interface arasındaki fark
+
+* Abstract class
+
+- Soyut ve somut methotlar içerir.
+
+- Alt sınıflara kalıtım için kullanılır. Nesnesi olmaz.
+
+- Ortak davranışları uygulamak ve alt sınıflar arasında kod paylaşımını kolaylaştırmak için kullanılır.
+
+
+* Interface
+
+- Sadece soyut methodlar ve sabit değişkenler içerir
+
+- Çoklu kalıtım için kullanılır. Bir sınıfın birde fazla davranışı aynı anda uygulamasına izin verir.
+
+- tür-uyumlu kod yazmak için kullanılır.

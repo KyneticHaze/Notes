@@ -1,0 +1,63 @@
+Kotlin Flow
+
+- Coroutine ile çalışırlar ve birden fazla değer yayabilirler.
+
+- Suspend fonksiyon bir değer döndürebiliyor. O yüzden birden fazla değer akışı sağlamak/döndürmek istiyorsak flow kullanmalıyız.
+
+** Flow Operatörleri
+
+- .filter { } -> filtreler
+- .map { } -> dönüştürür
+- .onEach { } -> Her biri için bir işlem yapılacağında bunun içine yazılır.
+- .collect { } -> Akıştan gelen verileri toplamak için kullanılır.
+
+- .collectLatest { } -> Yayılanların sonundakini getirir ancak delay kullanmazsak bir anlamı kalmaz collect'ten.
+
+- Mantık aslında biraz şu: flow ile akışa gireni emit ile yayarız collect ile yayılanı toplarız.
+
+
+
+* LiveData verileri kapsülleme !
+
+- Bir örnekle açıklayayım :
+
+private val _liveData = MutableLiveData<String>("Kotlin LiveData")
+val liveData: LiveData<String> = _liveData
+
+- _liveData viewModel içerisinde erişilebilen ve MutableLiveData yani değişebilen bir canlı veridir.
+- Ancak liveData ise LiveData yani değiştirilemeyen bi canlı veridir.
+
+* Şimdi işin encapsulation prensibine gelirsek: _liveData değiştirilebilir ancak ViewModel sınıfı dışından erişilemez. liveData erişilebilir ancak hali hazırda viewmodelden değiştirilemiyor, haliyle başka sınıflardan da değiştirilemez. Bu iş Solid'in açık kapalı prensibine uyuyor zannımca.
+
+
+* LiveData ile StateFlow arasındaki farklardan bazıları
+- init ederken liveData'ya değer vermek zorunda değiliz ancak bir değişkeni stateFlow ile tanımlarsak değer vermeliyiz.
+
+* StateFlowda kapsülleme sanırım .asStateFlow ile oluyor:
+
+private val _stateFlow = MutableStateFlow("Kotlin State Flow")
+val stateFlow = _stateFlow.asStateFlow()
+
+* Benzer kapsülleme SharedFlow'da da mevcut ancak sharedFlowda init ederken değer ataması yapamıyoruz hata verir. 
+
+private val _sharedFlow = MutableSharedFlow<String>()
+val sharedFlow = _sharedFlow.asSharedFlow()
+
+!!* SharedFlow ile StateFlow arasında değer ataması olarak fark şudur: StateFlow livedata'daki gibi ".value" ile değeri atanır ama SharedFlow'da ".emit()" ile atanır.
+
+
+		* SharedFlow ile StateFlow arasındaki bazı farklar *
+
+- StateFlow gözlemlenebilir bir flowdur. LiveData gibi ancak yaydığını filtreleyip, zipleyip, mapleyip toplayabilir ve bu gözlemlenebilir. LiveData'dan daha iyi gibi.
+
+- SharedFlow daha çok özel olarak tasarlayacağımız bir flow'a ihtiyaç duyduğumuzda kullanmamızın faydalı olacağı bir flow şekli.
+
+* Flow Compose
+
+- stateIn(viewModelScope, SharingStarted.Lazily, defaultValue = 0)
+
+- SharingStarted değerleri olarak Lazily, lazım oldukça paylaş, Eagerly sürekli paylaş, WhileSubscribed(stopTimeoutMillis = 5000) -> başka bir yere geçtiğimizde 5 saniye kadar devam et sonra durdur. Geri döndüğümüzde tekrar devam eder.
+
+- Ancak uygulamadan çıkınca devam ediyor. Çünkü collectAsState() lifecycle aware değil!.
+
+- Bunu düzeltmek için .collectAsStateWithLifeycle() kullanırız.

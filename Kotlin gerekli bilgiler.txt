@@ -1,0 +1,63 @@
+Kotlin gerekli bilgiler
+
+- Değişkenleri interpolasyon yoluyla kullansan da bir değişkene atamak daha iyi olur.
+
+- Kodun takip edilebilirliğini arttırmak için yerinde kodlar(static) kodlar kullanmaktan kaçın. Sabitlerin var ise companion object içinde kullanmakta yarar var.
+
+- Bir değişkeni başlatmadan kullanmak null reference hatası verdirtir. O sebeple başlangıç atamalarında değişkenin başladığından emin olmalıyız. Sonra başlatacaksak 'lateinit' kullanırız.
+
+- Benzersiz değişkenleri olabildiğince yerel kapsamda belirtelim.
+
+- Büyük veri yapıları var ise global kapsamda başlatmalıyız. Aksi halde bellek tüketimi fazla olur.
+
+- Kod tekrarını azaltmak için sabit veya enum kullanmak lazım.
+
+- Bir değişkene bir ifade de atayabiliriz. -> val  unitPrint = println("Merhaba")
+
+
+		* Array / List / ArrayList *
+
+Array
+
+- Boyutu değişmez
+
+- Aynı veri tipleri
+
+List
+
+- Boyutu değişmez
+
+- Farklı veri tipleri içerebilir
+
+- Boyutu değişecek ise 'mutableListOf' kullanılmalı
+
+ArrayList
+
+- Ekleme(add), çıkarma(remove) yapılabilir
+
+- kotlinde -> arrayListOf
+
+
+		* Verilerle ilgili bilgiler
+
+- Bir görseli sqlite veritabanına kaydetmek için Array<Byte>'e çevirmek gerekli
+
+
+Bitmap tipinde bir veriyi nasıl sqlite'a kaydedeceğiz?
+
+- Byte Array belleğini tutan bir nesne lazım -> ByteArrayOutputStream()
+
+- Bitmap Compress -> compress(Format türü, sıkıştırma kalite yüzdesi, ByteArrayOutputStream)
+
+- Sıkıştırılmış bitmap byteArrayOutputStream'e alınır.
+
+- byteArrayOutputStream'i byteArray'e çeviririz.
+
+
+	* Görseller için *
+
+- Glide, Picasso, Coil kütüphaneleri kullanılabilir.
+
+- @Volatile anotasyonu ile tanımlanan yapı, diğer threadlere de görünür hale geliyor.
+
+- synchronized() işlemi asenkronize olmadan sıralı işlem için kullanılan bir yöntemdir. Bir lock bir de block vardır.

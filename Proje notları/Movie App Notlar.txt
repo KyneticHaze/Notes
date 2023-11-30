@@ -1,0 +1,83 @@
+Movie App
+
+	* Alınan Notlar
+
+- DTO - Data Transfer Object
+- Modeli apiden gelen verilerden projemizde gerekli kısımları almak için oluşturuyoruz.
+- DTO'yu apiden gelen ve gidecek tüm verileri burada oluşturuyoruz.
+
+- Verileri çeken api fonksiyonlarının dönüş tipleri, oluşturduğumuz DTO'lardır.
+- Repomuzu bu api fonksiyonlarını barındıran arayüzden uygulayarak oluşturuyoruz.
+- Bu fonksiyonları kullanarak işlemler yapacağımız için use_case'lerimize repomuzu bir prop olarak veriyoruz.
+- Ancak use_case'lerimizde bize lazım olanları yani modellerimizdekileri kullanacağımızdan dolayı DTO'larımıza gerekli olanların ayıklayıp modelimizi döndüren eklenti fonksiyonlarımızı yazarak durumu kurtarıyoruz.
+- Sonrasında use_case'lerimizi uygun olan viewmodellerimizde kullanrak görünüm şartlarını ve görünümlerin gözlenmesini belirliyoruz ki görünüme geldiğimizde neyi görüntületeceğimizi düzenleyelim.
+
+!* Bir prensip *!
+
+- Note App'te de kullanılan bir yöntem olan durum tutma bir sınıf ile yapılıyor.
+- View'daki görünümlerin durumlarını tutan bir sınıf oluşturuyoruz ve onu viewmodel'de düzenliyoruz.
+
+!* Temiz mimari ile oluşturulan bir projede sunum katmanında bir görünüm için bir viewmodel bir event bir de state olması prensibe uygunluk açısından karmaşık uygulamalarda bile rahatlatacaktır.
+
+- gözlemlenecek _state verimizin değerini verirken yeni bir obje oluşturmadan verebiliriz. Yöntemi:
+
+	_state.value = _state.value.copy(
+                            error = it.message ?: "Error"
+                        )
+
+- _state verimizin değerinin kopyasını oluşturup içinde bir değer değiştirip onu _state verimizin değerine eşitleyebiliyoruz. Singleton prensibi açısından ve hafıza yönetimi açısından faydalı bir yöntem.
+
+	* Şöyle bir şey var kodda: içine direkt MoviesState'de barınan error parametresine atama yaptık çünkü _state verimizin tipi MoviesState.
+
+- MoviesEvent için viewmodelde bir onEvent sınıfı oluşturuyoruz.
+
+- view açıldığı anda gözükmesini istediklerimizi init { } fonksiyonu içinde yazıyoruz.
+
+	* Önemli !
+
+		- Çalıştığım api https güvenli protokolüne uymuyor. Http protokolü ile yazılmış. Bu pek güvenli değil.
+O yüzden uygulamanın çalışması için bir takım işler yapmak lazım. Bir xml dosyası içinde bir izin almamız lazım. O izni şöyle alırız:
+
+- apimiz : http:omdbapi.com 'du. 
+
+```
+
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">http://omdapi.com/</domain>
+    </domain-config>
+
+</network-security-config>
+
+```
+
+- Sonrasında bu xml'i androidManifest'e application tagı altında `android:networkSecurityConfig=""` bu kodun içine yazıyoruz.
+
+* Composable notlara dönelim...
+
+- MoviesEvent sealed'i içine yazılan Search data class'ı bir search stringi barındırıyor. Onu da search bar composition'ına verdiğimiz onSearch fonksiyon propunda(parametre olarak string yazıldı) çağırdığımızda içine it diye ekliyoruz.
+
+
+!!** Navigation Compose Rota argüman eklemesi (Route arguments)
+
+- savedStateHandle, jetpack compose'da kullanılan ve bir viewmodel'de key-value şeklinde depolanan bir yapıdır. 
+
+- Bir ekrana geçiş yaparken gönderilen verileri saklamak için kullanılabilir.
+
+* Projede şu şekil kullanıldı:
+
+	- Movie List ekranında bir yapıya tıklanınca id'sini navigate ediyoruz.
+	- Detail ekranında onu almak için Detail viewmodelde onu savedStateHandle ile deopluyoruz ki detail view'da kullanabilelim.
+
+!* Verinin gitmesi için kullanılan argümanı interpolasyon ile gönderiyoruz ancak bir süslü parantez daha eklemeyi unutabiliriz! Aslında veri navigation ile giderken endpointi şu şekil olur: //androidx.navigation/movie_detail_screen/id
+
+- Buradaki id aslında {} ile kaplanmalı route tarafında. Biz id argümanını interpolation ile şöyle gösterirken -> ${id}
+
+- Aslında route'a + olarak şu şekilde göstermeliyiz -> "/{${id}}" -> Yani interpolasyonu bir süslü parantez ile sarmalıyız. Nedeni de navigasyon rota işleyişinin bu şekilde çalışması ile açıklanabilir.

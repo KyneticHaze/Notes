@@ -1,0 +1,9 @@
+Kod yazmada 4 önemli husus
+
+- Okunabilirlik
+
+- Anlaşılabilirlik
+
+- Tekrar kullanılabilirlik
+
+- Bakım yapılabilirlik

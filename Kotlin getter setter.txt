@@ -1,0 +1,8 @@
+Kotlin getter / setter
+
+- getter -> class'ın niteliğini çağırmak için kullanılan bir fonksiyondur.
+
+* set encapsulation
+
+- set etmeyi engellemek için niteliğin altına bir girinti vererek private set yazmak yeterli
+

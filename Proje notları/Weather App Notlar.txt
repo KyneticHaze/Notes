@@ -1,0 +1,20 @@
+Weather App Notlar
+
+- groupBy() ? 
+
+- mapValues { } ?
+
+- Location class - lat, long, locationManager, locationListener
+
+- dto -> model => mappers file
+
+- FusedLocationProviderClient
+
+- suspendCancallableCoroutine
+
+- resume() ?
+
+- CancellableContinuation?
+
+- DateTimeFormatter(), ofPattern() ?
+

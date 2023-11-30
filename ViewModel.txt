@@ -1,0 +1,34 @@
+ViewModel
+
+Arayüz ile verilerin işlendiği katman arasındaki bağlantıyı sağlar.
+
+İş mantığına erişim sağlar. Modelden verileri alıp işleyen, güncelleyen fonksiyonlar barındırır.
+
+Bunun önemi:
+
+UI katmanında bulunan görünümleri UI bileşenlerinden soyutlayarak verilerin korunmasını ve paylaşımını kolaylaştırır.
+
+Diğer avantajı:
+
+UI bileşenlerinin yaşam döngüsünü takip etmesi ve onunla uyumlu davranmasıdır.
+
+ViewModel, yapılandırma değişikliklerini, ui bileşenlerini korur ve günceller.
+
+
+- LiveData
+
+Observer sınıfı ile verilerimizi tutar ve sadece etkin yaşam döngüsü durumundayken gözlemler. Etkin yaşam döngüsü -> Started - Resumed
+
+Her yapılandırma değişikliğinde yeni bir nesne oluşturmak yerine tek bir nesneyi kullanmasını sağlamak için "ViewModelProvider" kullanıyoruz. (Singleton Pattern)
+
+MutableLiveData -> değeri değişebilen liveData'dır.
+
+
+LiveData nesnesini gözlemleyen bir "observe" methodu vardır. observe(this, Observer Interface)
+
+- this yerine viewLifecycleOwner tercih edilir. 
+
+Neden?
+
+Çünkü fragmentten çıktığımızda fragment silinmese de görünümü silinir. tekrardan geri geldiğimizde iki lifecycle oluşur. Fragment lifecycle ve fragment ui lifecycle.
+

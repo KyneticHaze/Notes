@@ -1,0 +1,23 @@
+Kotlin Advanced Functions
+
+filter {} -> verilen veriyi filtreler ve boolean döndürür.
+
+map {} -> verilen veriyi dönüştürür. Mapper'larda bol kullanılır. DTO'ları modellere dönüştürmek için kullanılır.
+
+all {} -> içine yazılan durumu verinin tümünde arar. Boolean döndürür.
+
+find {} -> içine yazılan durumu bulur
+
+any {} -> içinde yazılan durumu verinin herhangi yerinde karşılıyor mu? Ona bakar. Boolean döndürür.
+
+count {} -> İçinde yazılan ifadeyi veride arar ve kaç tane olduğunu söyler.
+
+findLast {} -> içine yazılan durumun olduğu verinin son değerini verir.
+
+also {} -> Bunu yap, daha sonra bunu da yap demek için kullanılır.
+
+let {} -> Verimizi nullability'den kurtarmak için kullanırız.
+
+apply {} -> Bir değişkene sınıf veya bir şey atadığımızda onunla alakalı başka şeyleri bu kod arasında uygularız.
+
+with() -> apply'den farkı olarak nokta koyup devam edilmiyor.

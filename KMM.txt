@@ -1,0 +1,45 @@
+KMM
+
+- Android studio'ya önce kmm plugin'ini indiriyoruz ve proje oluşumunda kmm app'i seçiyoruz.
+
+- Presentation katmanını ayrı platformlarda yaparken veri alma ve işleme katmanlarını shared klasorünün altında commonMain klasöründe yapacağız.
+
+- Retrofit java ile çalışan bir kütüphane olduğu için kmm'de kullanamıyoruz. Çünkü alanımız artık tamamen kotlin olacak kmm'de. Onun yerine KTOR diye bir yapı kullanacağız.
+
+- Aynı şekilde dependency injection için de hilt kullanmayacağız. Kotlin'e özgü koin'i kullanacağız.
+
+- internal keyword'ü bir içeriği sadece o modülde erişime açık halde tutması için kullandığımız bir kelime.
+
+- Content Negotiation -> Networking işlemleri için kullanılan bir terim
+
+
+		* URL işlemleri için KTOR
+
+- örnek url -> https://api.themoviedb.org/3/movie/157336?api_key=3fda8f3cc3ee174703991877b9a0ec39
+
+
+- takeFrom() -> başlanılacak url yani base url -> https://api.themoviedb.org/ gibi
+
+- path() -> base url sonrasındaki yolu ifade eder -> movie/157336 gibi. Bu bir yoldur.
+
+- parameter() -> page, apikey gibi parametreleri ifade eder. parameter(key, value) misalen -> parameter("api_key", 3fda8f3cc3ee174703991877b9a0ec39) gibi. key'in, url'deki ile aynı olması şart.
+
+
+	* Ios için coroutine kullanmak için ufak bir işlem yapmak gerek.
+
+- Common main'de bir dispatcher interface oluşturuyoruz ve içine bir tane CoroutineDispatcher tipli değişken alıyor. Bu değişkenin getter'ının Dispatchers'ını yani thread pool'unu Default androidde ise IO seçiyoruz.
+
+- Ancak common mainde belirttiğimiz bu dispatcher'ın dosya düzenini değiştirmeden aynen ios ve android'de de yazmalıyız.
+
+	* expect / actual keywords
+
+- Bir fonksiyonu başka modulde beklemek için expect, beklenen modulde o fonksiyonu   gerçekleştirmek için actual keyword'lerini kullanırız.
+
+
+	* Presentasyon katmanında yapılması gerekenler
+
+- Her ekranın bir state data class'ının bulunması. O ekranın her durumunu kontrol eden bir veri sınıfının bulunması best practices açısından önem taşır. 
+
+- rememeberPullRefreshState() fonksiyonu sayfayı çekerek yenileme yapıldığında composition remember yapabilen bir androidx.compose.material kütüphanesi üyesidir.
+
+- 

@@ -1,0 +1,53 @@
+RxJava
+
+ReactiveX'de iki yapı vardır: Observable ve Observer
+
+Observable -> Veriyi dışa aktaran yapı
+
+Observer -> Dışa aktarılan veriyi dinler ve dinleme işlemleri farklı bir thread'de yapılabilir
+
+
+RxJava unsurları
+
+Subscription -> Observable ile observer arasındaki bağlantıyı sağlar.
+
+Scheduler -> İşlemin gerçekleştiği katman
+
+
+Observable türleri
+
+Observable -> Veriyi iletmek için kullanılır. İşlem bitince hata ya da başarılı şeklinde dönüş yapar. Dinleyici olarak Observer kullanır.
+
+Flowable -> Observable'dan farkı "back pressure strategy" yapısına sahiptir.
+
+Single -> Sadece tek bir değeri iletmek için kullanılır. O değeri başarı ile iletir ya da hata mesajı ile döner. onComplete methodu yoktur. API isteklerinde kullanılır. onSuccess ve onError methodu vardır. SingleObserver kullanır.
+
+Maybe -> Single'dan farkı değeri dönmek zorunda değildir. Maybe ile kullanıcı veritabanımızda herhangi bir kullanıcının olup olmadığını kontrol edebiliriz. Kullanıcı varsa onSuccess çalışır. MaybeObserver kullanır.
+
+Completable -> Herhangi bir data iletmez. Tamamlanırsa onComplete tamamlanmazsa onError fonksiyonları vardır. CompletableObserver kullanır.
+
+
+Schedulers türleri
+
+Scheduler -> İşlemlerin gerçekleştiği ve sonuçlandığı yapılardır.
+
+Observable yapılarını, schedulers değişkenleri olan subscribeOn ve observeOn ile kullanırız.
+
+subscribeOn -> Observable veriyi hangi threadde işlem göreceğini belirtiriz.
+
+observeOn -> Dinlenilen veriyi hangi thread'de yayınlayacağını belirtir.
+
+
+Thread türleri
+
+1) IO -> Genellikle api isteklerinde kullanılır. Çok CPU gerektirmez. İhtiyaç duyulduğunda yeni thread'ler üretir.
+
+2) Computation -> Buradaki thread sayısı cihazın sahip olduğu çekirdek sayısı kadardır. Çekirdek sayısından fazla işlem yapılırsa yeni işlemler için thread'ın boşalması beklenir.
+
+3) New thread -> İşlemi yeni thread oluşturarak yapar. İşlem çok ise maliyetli olur. Sadece gerek olduğunda kullanılmalı.
+
+4) Single -> Sadece tek bir yeni thread oluşturur. Ne kadar işlem varsa bu tek thread'de yapılır. Main thread'e alternatiftir.
+
+5) Trampoline -> Yeni thread oluşturmaz aksine işlemi mevcut thread'de sürdürür. Mevcut thread'deki akışı durdurup işlemin bitmesini bekler. Birbirine beklemesini istediğimiz birden çok observable için kullanabiliriz.
+
+6) Executor -> Bu bir custom scheduler. Büyüklüğünü bizim belirlediğimiz bir thread-pool oluşturup kullanırız. İşlem sayısının io scheduler için fazla olduğu yerde kullanırız.

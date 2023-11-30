@@ -1,0 +1,22 @@
+Loglama ve Timber Lib
+
+Uygulama geliştirirken akışı takip edebilmek için sadece bizim görebileceğimiz notlar alırız.
+
+Log.?("TAG", "Message") minvalinde
+
+Logun genel görünüşü budur. Soru işareti yerine logun türünü yazarız.
+
+Log türleri
+
+- Log.i() -> info = Bilgi mesajıdır.
+
+- Log.e() -> error = Hata durumunda kullanılır.
+
+- Log.w() -> warn = Uyarı niteliğindedir.
+
+- Log.v() -> verbose = Ayrıntılı bilgi için kullanılır.
+
+- Assert -> Hata ayıklama için kullanılır.
+
+
+* Timber kütüphanesi logları otomatik olarak silmeye yarayan otomatik tag oluşturan popüler bir log kütüphanesidir.

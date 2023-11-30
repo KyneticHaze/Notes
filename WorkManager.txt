@@ -1,0 +1,14 @@
+	- WorkManager -
+
+- Yenilikleri:
+
+* İş Sınırları -> Mesela "bunu sadece bu zamanda, böyleyken çalıştır" diyebiliriz.
+
+* Sağlam zamanlama -> Bunu bir defa çalıştır veya devamlı, 15 dakikada bir çalıştır diyebiliyoruz.
+
+* İşleri birbirine bağlama
+
+
+- İşi iptal etmek için 'cancelAllWork()' diyebiliriz. Ancak tag'e göre ya da ID'ye göre iptal seçenekleri de var.
+
+- Zincirleme, sadece OneTimeRequest'lerde olur. PeriodicRequest'lerde çalışmaz.

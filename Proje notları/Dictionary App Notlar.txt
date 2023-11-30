@@ -1,0 +1,43 @@
+Dictionary App Notlar
+
+- Bu projede verileri api'den çekip veritabanına kaydediyoruz.
+
+- Veritabanından alıp gösteriyoruz view'da.
+
+
+
+
+ * App create hierarchy
+
+- Apı func create
+
+- DTO class create
+
+- DTO mapper fun create
+
+- DTO -> Domain/Model
+
+- Entity class create
+
+- Database func create
+
+- Domain Repository create
+
+- Data/ Repo impl create
+
+- use_case create
+
+- viewmodel create
+
+- state create
+
+- event create
+
+
+* Bakmam gerekenler
+
+- LaunchedEffect
+
+
+
+

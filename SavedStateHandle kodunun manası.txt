@@ -1,0 +1,11 @@
+SavedStateHandle kodunun manası
+
+
+- savedStateHandle, jetpack compose'da kullanılan ve bir viewmodel'de key-value şeklinde depolanan bir yapıdır. 
+
+- Bir ekrana geçiş yaparken gönderilen verileri saklamak için kullanılabilir.
+
+* Projede şu şekil kullanıldı:
+
+	- Movie List ekranında bir yapıya tıklanınca id'sini navigate ediyoruz.
+	- Detail ekranında onu almak için Detail viewmodelde onu savedStateHandle ile deopluyoruz ki detail view'da kullanabilelim.

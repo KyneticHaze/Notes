@@ -1,0 +1,19 @@
+Gradle nedir?
+
+Yazılım projesi geliştirilirken kullanılan inşa aracıdır.
+
+Build Etme?
+
+- Uygulamanın kaynak kodunu derlemek, bunları ters edilebilir, uygulanabilir, imzalanabilir ve yayınlanacağımız apk'lar haline getirmedir.
+
+- mipmap xml klasoru uygulamanın logolarını içerir.
+
+- values xml klasoru uygulamanın metin, stil gibi değerlerini içerir.
+
+
+	* build.gradle.kts (root - module)
+
+- module düzeyi build.gradle -> Projenin yapılandırma ayarlarını bu dosya içerisinde belirliyoruz.
+
+- root düzeyi build.gradle -> Projedeki tüm modullere uygulanan yapılandırmaları içerisinde yönetir.
+

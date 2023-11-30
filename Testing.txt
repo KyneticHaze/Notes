@@ -1,0 +1,58 @@
+Testing
+
+Unit testler en ufak birim testleridir. Ufak birimleri sınar.
+
+Truth kütüphanesi bu işi daha iyi yaptığından onu unit testlerinde sıklıkla kullanırız.
+
+
+TDD (Test-Driven-Development)
+
+Bunun mantığı -> Uygulamayı kodladıkça testlere tabii tutmak
+
+- Test fonksiyon isimlendirmeleri ``(backtick) ile belirtilir ve içerisinde testin amacını belirten anlamlı ve kısa bir isim yazılır. Bu işin oluru budur.
+
+Test başlamadan önce çalışacak fonksiyon için @Before, test bittikten sonra @After anotasyonlu iki fonksiyon yazmalıyız.
+
+Test başlarken:
+
+@Before
+fun setUp() {}
+
+@After
+fun tearDown() {}
+
+
+- Espresso -
+
+UI testleri için iyi bir kütüphanedir.
+
+espresso-core -> espresso'nun temel kütüphanesidir.
+
+- View'lar ile ilgili yazmamız gerekentemel yapıları içerir. onView ve onView'a bağlı tıklama özelliği, klavyenin kapatılması, eşleştirme veya karşılaştırma
+
+- rules -> Kuralların bulunduğu şu sınıfları içerir: 
+
+- ActivityTestRule -> tek aktivitenin işlevsel testini yapmak için kullanılır.
+
+- DisableOnAndroidDebug -> Hata ayıklama sırasında devre dışı bırakılacak kurallar için kullanılır.
+
+- GrantPermissionRule -> Çalışma zamanı izinlerin verilmesini sağlar.
+
+- ServiceTestRule -> Servislerin başlatılmasını ve kapatılmasını, test edilmesini sağlar.
+
+espresso-contrib -> ViewPaperActions, RecyclerViewActions, NavigationViewActions sınıflarını ve olaylarını kullanmamızı sağlar.
+
+! Testlere başlamadan önce animasyonları kapatmak önemlidir. Sıkıntı çıkarabiliyorlar.
+
+- Espresso Test Yapısı -
+
+Espresso.onView(ViewMatcher).perform(ViewAction).check(ViewAssertion)
+
+- ViewMatcher -> View'a ya da view'deki ögeye ulaşır.
+
+- ViewActions -> View'ler ile iletişime girmemizi sağlar.
+
+- ViewAssertion -> Koşulun doğru olup olmadığını kontrol etmek için kullanılır.
+
+* Bunlar UI testler için geçerlidir.
+

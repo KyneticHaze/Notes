@@ -1,0 +1,18 @@
+Katmanlı Mimari
+
+Data
+
+Domain
+
+Presentation
+
+
+Data Layer -> Veriye erişim işlemleri burada gerçekleşir. Veritabanı bağlantısı, sunucudan veri çekme, veritabanına veri ekleme, silme, güncelleme işlemlerinin tümü bu katmanda gerçekleşir.
+
+Domain Layer -> Veri katmanından işlenecek veri bu katmanda alınır ve uygulama ihtiyacına göre veriler bu katmanda işlenir.
+
+Presentation Layer -> Arayüz katmanıdır. İşlenen veri burada gösterilir. Tabii android mimarisi olan MVVM burada devreye giriyor. Her bir view'ın bir de viewmodeli olur ki bu viewmodel'ler iş katmanındaki işlenmiş verileri uygun şekilde göstermekte veya göstermemekte karar sahibidir. Ona göre kullanıcı verileri uygun şekilde görür.
+
+CRUD?
+
+Create-read-update-delete prensibidir.

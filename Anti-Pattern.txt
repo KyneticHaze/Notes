@@ -1,0 +1,24 @@
+Anti Pattern - Tasarım Örüntülerine ters gelen şeyler
+
+1. Magic Push Button
+
+ButonClick programcılığı. Herhangi bir soyutlama yapılmaksızın görsel nesnelerin arkasında kodlamanın yapılmasıdır. Ara yüz tarafı ile iş mantıkları genellikle buton gibi bir kontroller arkasına gömülür.
+
+
+2. Spagetti Kod
+
+Bakımı yapılamayacak kadar karışmış kodlardır. Methodlar süreç odaklı yazılır hatta süreç adları alır. Çoğu method parametre almazlar. Nesneler arasında hiç ilişki yoktur. OOP temel prensipleri kullanılmamıştır.
+
+
+3. Lazanya Kod
+
+Gereğinden fazla sayıda katmana sahip uygulama geliştirilmesine denmektedir (Aşırı çok katmanlı uygulama).
+
+Çok katman, çok sayıda irili ufaklı class, anlaşılması ve değiştirilmesi zor bir yazılım olabilir.
+
+
+4. Kopyala-Yapıştır Programlama
+
+Daha generic bir çözüm üretmek yerine var olan kodları koplayarak geliştirme yolunu tercih etmektir. Çoğunlukla bir çözüm için yazılımın her hangi bir yerinde uygulanan bir kod parçasının, ihtiyaç olunan başka bir yerde aynen kopyalanarak kullanılmaya devam etmesi olarak tanımlanır. Doğal sonucu olarak bir değişiklik olması halinde kodun çoğaltıldığı yerlere gidilmesi de gerekecektir. 
+
+! Söz konusu parçaları soyutlayıp, nesne yönelimli dil temellerine uygun olacak şekilde ayrıştırmak önemlidir.

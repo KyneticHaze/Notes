@@ -1,0 +1,11 @@
+Compose State Management
+
+- mutableStateOf -> değişmesi gereken yapılar kurguladığımızda kullanmamız gereken method budur. Tabii bunun çeşitleri de var ama o ihtiyaca göre tercih edilebilir.
+
+- Ancak bunun çalışabilmesi için remember { } içinde kullanılması lazım. Çünkü durumların değişmesinde composable'lar recomposition olurlar. Yani yeniden çizilirler. Yeniden çizildiklerinde veirlerin kaybolmaması için hatırlanması(remember) lazım.
+
+
+** State Hoisting
+
+Stateful composable'ları stateless hale getirmek dar kapsamdan çıkarmak için önemlidir. Onu kullanan üst composable'ı stateful hale getirmek gerekir. Alttan üste doğru statefulluk artmalı. Aşağı doğru, en ufak birime doğru iyice stateless olmalı.
+

@@ -1,0 +1,20 @@
+Kotlin oop prensipleri tricks
+
+- inheritance
+
+sınıfın kalıtım verebilmesi için 'open' keyword alması lazım. Çünkü tüm sınıflar gömülü şekilde 'final'dır.
+
+- polymorphism
+
+* static poly
+
+- secondary constructor ile birbirine benzer. Fonksiyon aşırı yüklemesi gibidir. Aynı isme sahip olsa da farklı parametreler alan iki fonksiyon olabilir. Buna function overloading deriz.
+
+* dynamic poly
+
+- abstract class'ın bir niteliğinin ya da işlevinin alt sınıf tarafından kalıtım alıp üstüne yazması ile farklı iki biçimin aynı yapıdan çıkmasına sebep olur.
+
+
+- abstract
+
+soyut sınıflardan obje oluşturulmaz. Soyut sınıflar miras versin diye yaratılır.

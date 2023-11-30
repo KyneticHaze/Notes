@@ -1,0 +1,42 @@
+DI - Kotlin Koin
+
+- Response sınıfı retrofit2'ni kendi sınıfı. Success veya error geri dönümünü anlar halleder.
+
+- Coroutine dispatcher'ı IO'da Retrofit ile çektiğimiz veriyi withContext ile çekilen veriyi(context'i) farklı thread'de gösterebiliyoruz.
+
+- Hangi verileri gözlemlemek istiyorsak viewmodelde MutableLiveData ile observe edebilir ve ona göre view'a aktarabiliriz. 
+
+- Bu viewmodel liveData olayını compose'da mutableStateOf ile daha rahat yapabilmiştim. Gözlemlemek yerine recomposition yapmıştı sanırım.
+
+- viewmodelde mutableLiveData olarak belirttiğimiz viewmodel elemanlarını görünüm aşamasında observe methodu ile gözleyerek içinde görünüm mantığına göre işlemler yapabiliriz. observe bizden bir owner verilerin yaşam döngüsünün sahibini isteyecek. Ona 'viewLifecycleOwner' diyebiliriz.
+
+- Koin implementasyonunu yaptıktan sonra işlemler:
+
+	* Hiltteki gibi app sınıfını yaratıyoruz ama bu sefer context ve modul lazım
+	* app sınıfı içine yazdığımız onCreate fonksiyonunun içine startKoin { } fonksiyonu içine bir androidContext(this@Application) bir de module() fonksiyonu yazıyoruz.
+	* Bir modul oluşturup içine inject etmek istediğimiz fonksiyonları yazarız
+	* O modulu app sınıfı içindeki modules() fonksiyonu içine belirttiğimizde artık bağımlılıkları enjekte etmeye hazırız!
+
+- lazy tanımlama -> by keyword'u ile tanımlanır ve kullanana kadar init etmiyor.
+
+- constructor injection kullanmayacaksak koinde get<>() ile belirtebiliriz.
+
+
+					*   Module İşlemleri   *
+
+
+- Modül içerisinde single { } ile belirttiğimiz işlemleri constructor injection ile belirtmemizde bir sakınca yoktur.
+
+- Bağımlılığını enjekte edeceğimiz nesneyi ya da herhangi bir şeyi single içine yazarken onun miras aldığını single içine yazabiliriz: single<CryptoDownload> { } gibi
+
+- viewmodel, fragment, single, factory, worker ve scope dsl fonksiyonları vardır.
+
+- factory scope içine yazılan, her enjekte edildiğinde yeni bir nesne oluşturur.
+
+- iki farklı dsl tarzı var. Classic, constructor dsl
+
+- Classic kolay, constructor dsl'de ise ise örnek kullanım: single(::SınıfAdı) { bind<MirasVerenİsmi>() } şeklinde kullanılır.
+
+- module içinde yazılan bir bağımlılık enjektesine diğer bağımlılık enjektesi ihtiyaç duyuyorsa bunu get() ile hallederiz.
+
+- Eğer scope içinde iki farklı işlem aynı view'a enjekte edilecekse ve karışıklık istenmiyorsa scope constructor'ına bir qualifier ekleriz. Onun da içine bir named("") ekleriz.

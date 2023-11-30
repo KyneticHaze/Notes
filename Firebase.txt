@@ -1,0 +1,13 @@
+Firebase
+
+- NoSql bir veritabanıdır.
+
+- Firestore, firebase'e has veritabanıdır.
+
+- Storage, veritabanında tutmayacağımız medya öğelerini tutmak için vardır.
+
+- NoSql olduğu için sqlite'daki gibi tablolar yok. Yani ilişkisel değildir. Koleksiyon ve dokümanlar vardır.
+
+- Dokümanlar en fazla 1 MB yer kaplar
+
+- Medya öğelerini storage'ye kaydederiz. Oradaki url'leri de firestore'a kaydederiz.

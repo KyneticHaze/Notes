@@ -1,0 +1,52 @@
+Kotlin - Note App püf noktalar
+
+- Sealed class'lar enum class'ların daha gelişmişleri. Bu projede sık kullanıldığı için iyice anladım.
+
+- Use case denilen kullanım senaryoları, normalde viewmodelde yazdığımız fonksiyonların yazıldığı yerdir. Önceki projelerde viewmodel'e fonksiyonları yazıp sonra da takip edilecek verileri bu fonksiyonlarda belirtirdik. Ona göre bir görünüm kullanım senaryosu oluştururduk. Şimdi kullanım senaryolarını ayrı yazarak hem takip edilebilirliği arttırdık. hem de kod kalabalığını önledik. Büyük projelerde bu prensip hayat kurtarır.
+
+- Data class'da belirttiğimiz veri modelimize bir companion object kullanarak renk listesini static halde modelde tuttuk. Bu yöntemle de companion objecti daha iyi anladım.
+
+- Görünümleri kontrol eden viewmodel'leri pek anladığımı söyleyemem. Ancak bu projede biraz daha anladım.
+
+- Viewmodel'leri composable ekranlara sunmayı ve composable bileşenler ile sayfaları tasarlamaları öğrendim.
+
+- Ana aktivite üzerinden navhost kullanarak composable view'ler üzerinde geçişkenliği yani navigate etmeyi daha iyi anladım.
+
+- Repository'ler, veritabanı ve api işlemlerini gerçekleştirecek fonksiyonların barındığı alan.
+
+- Kullanım senaryoların yerine getireceği işlemleri repo'dan gelen değişken ile halledebildik.
+
+- Veritabanı ve api işlemleri için kullanılan fonksiyonları coroutine ile başka thread'de gerçekleştirmeyi daha iyi anladım.
+
+- Composition(Composable function)'ların parametrelerini arttırmayı ve onları kullanmayı daha iyi hale getirdim.
+
+
+* Note App Bilinmesi Gerekenler *
+
+	* LaunchedEffect? Coroutine compose, RecomposeScope?
+
+
+* Bilinmesi gerekenleri araştırdım: 
+
+- use_case -> Domain katmanında yer alan, viewmodellerde gözlenmeye tabi tutulan iş parçacıklarıdır. Her biri bir iş yapmalıdır ki mimari ve geliştirme daha sağlıklı olsun. Yani uygulamadaki her bir kullanım durumunu use_case paketi altında teker teker tanımlayıp oluştururuz.
+
+- onEach lambda methodu flow'a özel bir methoddur. Flow içine giren veri; akışa tabi tutulur, emit ile yayılır ve onEach ile yayılan her bir veri üzerinde işlem yapılır.
+
+- invoke fonksiyonu, nesneleri fonksiyon gibi davrandırmak için kullanılan fonksiyondur. Bu davranışı tetikleyen ise operator anahtar kelimesidir. () operatörünü bir fonksiyonmuş gibi davrandıran operator anahtar kelimesidir. Ancak o fonksiyona invoke kelimesini eklememiz bize bu fonksiyonun ne yaptığını daha açık şekilde belirtir.
+
+- sorted() fonksiyonu, dizideki öğeleri varsayılan olarak doğal düzende sıralar.
+
+- sortedBy { } fonksiyonu, dizideki öğeleri belirli bir fonksiyona göre sıralar. Bu sıralamanın ölçütünü içine yazarız.
+
+- State, Compose'da view'lerin güncel durumunu temsil etmek için kullanılan bir veri yapısıdır. State, değiştirilebilir ve gözlemlenebilirdir ve Compose'da viewmodel'ler tarafından kullanılır.
+
+
+		* mutableStateOf / MutableLiveData / MutableSharedFlow / MutableStateFlow *
+
+- MutableStateOf -> Verilerin nadiren değiştiği ve bir view tarafından gözlemlendiği durumlarda kullanılır.
+
+- MutableLiveData -> Verilerin sürekli gözlemlendiği ve bir view'da birden fazla kez gözlemlenmesi gereken durumlarda kullanılır.
+
+- MutableSharedFlow -> Verileri bir veya daha fazla gözlemci tarafından gözlemlenmesi için kullanılan bir veri yapısıdır. MutableSharedFlow, verilerin değiştirildiğinde gözlemcileri otomatik olarak günceller.
+
+- MutableStateFlow -> Verileri bir veya daha fazla gözlemci tarafından gözlemlenmesi için kullanılan bir veri yapısıdır. MutableSharedFlow, verilerin değiştirildiğinde gözlemcileri otomatik olarak günceller.
