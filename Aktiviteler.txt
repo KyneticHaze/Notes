@@ -1,0 +1,35 @@
+Aktiviteler
+
+onCreate -> Kullanıcı daha görmeden aktivite başlamış olur.
+
+onStart -> Yaratılan aktivite başlar ama kullanıcı etkileşimine henüz açık değildir.
+
+onResume -> Artık aktivite yürürlüktedir ve kullanıcı ile etkileşime hazırdır.
+
+Uygulamadan çıkarsak önce onPause sonrasında da onStop aktivite metotları çalışır. Ancak uygulamaya yeniden girersek bu sefer onCreate metodu çağırılmaz çünkü zaten yaratılmış bir aktiviteyi sadece geri açıyoruz. Bu yüzden uygulama yeniden açıldığında onStart ve onResume metotları çalışır.
+
+Bu durum uygulamayı arkaya aldığımızda olur ancak uygulamayı kapatırsak baştan başlatmak durumunda kalırız. Tekrar başlattığımızda da onCreate methodu çalışarak başlanır.
+
+Telefon yan çevrilince aktivite tekrar başlıyor. Bu yüzden onCreate metodu çalışıyor.
+
+- SavedInstanceState - 
+
+Bundle, bilgileri methodlar, aktiviteler arasında taşımak için kullanılan pakettir. 
+
+Bu savedInstanceState aktivitenin içinde bulunduğu durumu kaydeden ve sonra geri getiren bilgi bohçasıdır(bundle).
+
+- Uygulama EditText tipli verileri kendisi getiriyor. Ancak TextView tipli verileri getirmiyor.
+
+Peki telefon yan çevrilince aktivitenin yeniden başlaması sebebiyle verilerin kaybolmasının önüne nasıl geçeriz?
+
+- onSaveInstanceState() fonksiyonu ile verileri bundle edip tutacağız.
+
+- onRestoreInstanceState() fonksiyonu ile bundle edilmiş verileri açıp yerine koyacağız.
+
+- aktivitenin sonlanması durumunda onDestroy methodu çalışır.
+
+- Intent -
+
+* Intent ile aktiviteler arası geçiş sağlanır.
+
+* eğer diğer aktiviteye geçiş yapılırken önceki aktivite için finish() methodu kullanılırsa geri geldiğimizde o aktiviteyi bulamayız. Çünkü destroy edilmiş olur. Yani finish() methodu kullanılınca OnDestroy methodu da çalışır.
