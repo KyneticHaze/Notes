@@ -36,6 +36,7 @@
 - [Testing](https://github.com/KyneticHaze/Notes/blob/master/Testing.txt)
 - [Viewmodel](https://github.com/KyneticHaze/Notes/blob/master/ViewModel.txt)
 - [WorkManager notları](https://github.com/KyneticHaze/Notes/blob/master/WorkManager.txt)
+- [Aktiviteler](https://github.com/KyneticHaze/Notes/blob/master/Aktiviteler.txt)
 
 
 # Projects
