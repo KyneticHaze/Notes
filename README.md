@@ -37,6 +37,7 @@
 - [Viewmodel](https://github.com/KyneticHaze/Notes/blob/master/ViewModel.txt)
 - [WorkManager notları](https://github.com/KyneticHaze/Notes/blob/master/WorkManager.txt)
 - [Aktiviteler](https://github.com/KyneticHaze/Notes/blob/master/Aktiviteler.txt)
+- [Content Provider](https://github.com/KyneticHaze/Notes/blob/master/Content%20Provider.txt)
 
 
 # Projects
