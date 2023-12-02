@@ -1,0 +1,21 @@
+Content Provider
+
+Client, uri ile content resolver'a gidecek. Content resolver da content provider'a gidecek ve content provider'dan veri kaynağına erişilecek.
+
+Kullanıcının contact verilerine ulaşmak için -> READ_CONTACTS iznini almak lazım.
+
+Contact verileri rehber bilgileri, mesajları gibi bilgilerine denebilir.
+
+Content Provider methodları
+
+- onCreate
+
+- query
+
+- insert
+
+- delete
+
+- update
+
+- getType
