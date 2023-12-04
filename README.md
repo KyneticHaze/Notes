@@ -6,7 +6,7 @@
 
 <img src="https://media.giphy.com/media/dQpUkK59l5Imxsh8jN/giphy.gif" width="350">
 
-### Note Links
+## Note Links
 
 - [abstract vs interface](https://github.com/KyneticHaze/Notes/blob/master/Abstract%20class%20ile%20interface.txt)
 - [Admob android reklam](https://github.com/KyneticHaze/Notes/blob/master/Admob_Mobil%20reklam%20para%20kazanma.txt)
@@ -38,12 +38,20 @@
 - [WorkManager notları](https://github.com/KyneticHaze/Notes/blob/master/WorkManager.txt)
 - [Aktiviteler](https://github.com/KyneticHaze/Notes/blob/master/Aktiviteler.txt)
 - [Content Provider](https://github.com/KyneticHaze/Notes/blob/master/Content%20Provider.txt)
+- [Service](https://github.com/KyneticHaze/Notes/blob/master/Service.txt)
 
 
-# Projects
+## Projects
 
   - [Dictionary App Notları](https://github.com/KyneticHaze/Notes/blob/master/Proje%20notlar%C4%B1/Dictionary%20App%20Notlar.txt)
   - [Note App püf noktalar](https://github.com/KyneticHaze/Notes/blob/master/Proje%20notlar%C4%B1/Kotlin%20-%20Note%20App%20p%C3%BCf%20noktalar.txt)
   - [Movie App Notları](https://github.com/KyneticHaze/Notes/blob/master/Proje%20notlar%C4%B1/Movie%20App%20Notlar.txt)
   - [Todo App Notları](https://github.com/KyneticHaze/Notes/blob/master/Proje%20notlar%C4%B1/To%20Do%20App%20-%20Notlar.txt)
   - [Weather App  Notları](https://github.com/KyneticHaze/Notes/blob/master/Proje%20notlar%C4%B1/Weather%20App%20Notlar.txt)
+
+## Diagrams
+
+<div>
+  <img src="https://github.com/KyneticHaze/Notes/blob/master/projects_diagrams/clean_arch.png" width="350">
+  <img src="https://github.com/KyneticHaze/Notes/blob/master/projects_diagrams/service_diagram.png" width="350">
+</div>
