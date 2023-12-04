@@ -1,0 +1,10 @@
+Intent
+
+Intent'ler 3 temel bileşenden oluşur
+
+1 -> Action : Gerçekleştirmek istediğimiz eylemi belirtiriz. Misal ACTION_VIEW ile bir nesneyi görüntülemek istediğimizi belirtiriz.
+
+2 -> Data : Intent'in iletmek istediği veri parçasını belirtir. CONTENT_URI veri türü bir içeriğin URI'sini temsil eder.
+
+3 -> Category : Intent'in hangi tür bileşenler tarafından ele alınabileceğini belirtir. Örneğin CATEGORY_DEFAULT kategorisi, herhangi bir tür bileşen tarafından ele alınabilecek intent'ler için kullanılır.
+

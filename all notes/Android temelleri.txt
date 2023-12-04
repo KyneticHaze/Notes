@@ -1,0 +1,10 @@
+Android temel
+
+Bir android uygulamasının 4 temel bileşeni vardır.
+
+Activiteler
+Servisler
+Yayın alıcıları(Broadcast receiver)
+İçerik sağlayıcıları(Content Provider)
+
+Her bileşenin bir amacı vardır ve her birinin ayrı ayrı yaşam döngüleri vardır.

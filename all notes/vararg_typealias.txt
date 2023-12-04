@@ -1,0 +1,9 @@
+vararg / typealias
+
+Bir fonksiyona birden fazla parametre göndermeyi kolaylaştıran bir anahtar kelimedir. Bir dizi olarak işlenir.
+
+typealias ise gömülü olan bir türü özel olarak isimlendirmeye yarar.
+
+typealias Password = String
+
+fun getPassword(password: Password) {} gibi
