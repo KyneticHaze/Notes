@@ -1,0 +1,9 @@
+Service
+
+Servisler arka planda ve önplanda çalışan arayüze sahip olmayan bileşenlerdir.
+
+Service Lifecycle
+
+Servis, startService methodu ile başlar ve onCreate methodu ile yaratılır. Sonrasında onStartCommand methoduna geçilir ve servis ile alakalı yapılacak işlemler burada yapılır. Sonrasında stopService methodu ile servis bitirilir ve onDestroy methodu çalışır.
+
+Yazılı belirttiğim servis yaşam döngüsünü diagram halinde de belirttim. Diagram için projects_diagrams'a gidebilirsin.
