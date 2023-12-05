@@ -42,6 +42,7 @@
 - [Android temelleri ufak not](https://github.com/KyneticHaze/Notes/blob/master/all%20notes/Android%20temelleri.txt)
 - [Intent](https://github.com/KyneticHaze/Notes/blob/master/all%20notes/Intent.txt)
 - [vararg-typealias](https://github.com/KyneticHaze/Notes/blob/master/all%20notes/vararg_typealias.txt)
+- [Broadcast Receiver](https://github.com/KyneticHaze/Notes/blob/master/all%20notes/Broadcast%20Receiver.txt)
 
 
 ## Projects
