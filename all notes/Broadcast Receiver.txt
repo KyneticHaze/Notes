@@ -1,0 +1,28 @@
+Broadcast Receiver (Yayın alıcılar)
+
+Telefon belli durumlar esnasında bazı bildirimler yayar. Bizler de kullanıcılara bu yayınları alıp göstermek için yayın alıcılar(broadcast receiver)'ı kullanırız.
+
+Broadcast Receiver'ı miras alan bir sınıf oluşturduğumuzda implemente edeceğimiz tek method onReceive() yani yayını alınca ne yapacağımız ile alakalı işlemleri uyguladığımız method olacaktır.
+
+receiver'a kayıt olmak için registerReceiver() methodu kullanırız ve bizden iki parametre ister. broadcastReceiver ve intentFilter
+
+intentFilter da biz yayının amacını alırız misal batarya düşük ise bununla ilgili telefonun yayacağı pil düşük bildirimi gibi
+
+brodcastreceiver ile ne yapacağımızı, intentfilter ile hangi yayında olduğunu belirtiriz.
+
+Esas olan burada sistemin yaydığını manipüle etmektir.
+
+Biz burada kodun içinde yaptık ama bunu manifeste de kayıt edebiliriz.
+
+Eğer kodun içinde register etmiyorsak manifest içinde register etmeliyiz.
+
+<application> tagı altında activity, service, provider ve receiver tagları olur. Bunlar android uygulamanın 4 bileşenidir. Eğer broadcast receiver'dan miras alan bir receiver class'ı oluşturduysak ve broadcast'i kod içinde kayıt etmediysek application tagı altında bir <receiver> tagı oluşturuyoruz ve bu miras alan sınıfımızı buraya yerleştiriyoruz. Bu kadar!
+
+Örnek -> <receiver android:name=".MainActivity$BroadcastingInnerClass" />
+
+Bundle - Veri taşımanın intent dışında bir başka yolu
+
+putString,putInt gibi methodlar ile key,value tarzında yollanıyor.
+
+TelephonyManager -> Telefonun o anki durumuna ulaşan bir sınıftır.
+

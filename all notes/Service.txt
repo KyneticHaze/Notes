@@ -36,3 +36,9 @@ onPreExecute() -> Uygulama(execute) öncesi bir dizi işlem gereksinimi duyulurs
 onPostExecute() -> Yapılacak asenkron işlemler dizisi son bulduğunda uygulanacak method burasıdır.
 
 Uygulama içinde(DownloadService) service kullandık ve servisin onStartCommand methoduna kendi oluşturduğumuz AsyncTask objesi tanımladık. Objeye 10 saniyelik bir işlem execute ettik. Tabii bundan önce yukarıda bahsettiğim methodları içeren ve AsyncTask'tan miras alan custom bir asynctask sınıfı oluşturduk. O custom sınıfından bir obje oluşturuyoruz esasen.
+
+Sticky
+
+Start_Sticky -> arka planda çalışmasını istediğimiz şeyler için kullanılır. Misal müzik çalmak.
+
+onStartCommand methodu int dönüşlü bir method ve START_STICKY de int döner. onStartCommand methodunun dönüşüne bu kodu verirsek yapacağımız servis işlemi arka planda devam eder.
