@@ -39,6 +39,9 @@
 - [Aktiviteler](https://github.com/KyneticHaze/Notes/blob/master/all%20notes/Aktiviteler.txt)
 - [Content Provider](https://github.com/KyneticHaze/Notes/blob/master/all%20notes/Content%20Provider.txt)
 - [Service](https://github.com/KyneticHaze/Notes/blob/master/all%20notes/Service.txt)
+- [Android temelleri ufak not](https://github.com/KyneticHaze/Notes/blob/master/all%20notes/Android%20temelleri.txt)
+- [Intent](https://github.com/KyneticHaze/Notes/blob/master/all%20notes/Intent.txt)
+- [vararg-typealias](https://github.com/KyneticHaze/Notes/blob/master/all%20notes/vararg_typealias.txt)
 
 
 ## Projects
