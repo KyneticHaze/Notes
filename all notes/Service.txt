@@ -42,3 +42,4 @@ Sticky
 Start_Sticky -> arka planda çalışmasını istediğimiz şeyler için kullanılır. Misal müzik çalmak.
 
 onStartCommand methodu int dönüşlü bir method ve START_STICKY de int döner. onStartCommand methodunun dönüşüne bu kodu verirsek yapacağımız servis işlemi arka planda devam eder.
+
