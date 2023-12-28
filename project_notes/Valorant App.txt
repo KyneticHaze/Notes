@@ -1,0 +1,28 @@
+Valorant App Notları - Jetpack Compose
+
+* Pager
+
+- Pager içerisinde kullanılan bazı araçlar
+
+* rememberPagerState
+* horizontalPager - verticalPage
+* Animatable - animateTo
+* ColorFilter
+* TabRow - Indicator
+* animateScrollToPage
+
+
+- Accompanist
+
+* Accompanist, compose için eksik veya deneysel durumda olan henüz yayımlanmamış bazı bileşenlerin erken sürümlerini içeren bir kütüphanedir. Accompanist'in bazı özellikleri compose'u hızlandırır, ek özellik sağlar. 
+
+* Accompanist'in:
+- Nav kütüphanesi ile daha karmaşık gezinme
+- Data store kütüphanesi ile verileri daha verimli yönetme
+- Animasyon kütüphanesi ile zengin ve etkileşimli animasyonlar
+
+
+* Compose'daki Pager ile Xml'deki ViewPager2 arasındaki fark
+
+İkisi de birden çok sayfayı görüntülemek ve sayfalar arasında gezinmek için kullanılır. Pager daha az kod ile daha özelleştirilebilir ve performans açısından animasyonlar ve korutinler kullanabilir.
+
