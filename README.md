@@ -43,6 +43,8 @@
 - [Intent](https://github.com/KyneticHaze/Notes/blob/master/all%20notes/Intent.txt)
 - [vararg-typealias](https://github.com/KyneticHaze/Notes/blob/master/all%20notes/vararg_typealias.txt)
 - [Broadcast Receiver](https://github.com/KyneticHaze/Notes/blob/master/all%20notes/Broadcast%20Receiver.txt)
+- [Android Mimarisi](https://github.com/KyneticHaze/Notes/blob/master/all%20notes/Android%20Mimarisi.txt)
+- [Android SDK](https://github.com/KyneticHaze/Notes/blob/master/all%20notes/Android%20SDK.txt)
 
 
 ## Projects
@@ -52,10 +54,15 @@
   - [Movie App Notları](https://github.com/KyneticHaze/Notes/blob/master/project_notes/Movie%20App%20Notlar.txt)
   - [Todo App Notları](https://github.com/KyneticHaze/Notes/blob/master/project_notes/To%20Do%20App%20-%20Notlar.txt)
   - [Weather App  Notları](https://github.com/KyneticHaze/Notes/blob/master/project_notes/Weather%20App%20Notlar.txt)
+  - [Valorant App Notları](https://github.com/KyneticHaze/Notes/blob/master/project_notes/Valorant%20App.txt)
 
 ## Diagrams
 
 <div>
-  <img src="https://github.com/KyneticHaze/Notes/blob/master/projects_diagrams/clean_arch.png" width="350">
-  <img src="https://github.com/KyneticHaze/Notes/blob/master/projects_diagrams/service_diagram.png" width="350">
+  <img src="https://github.com/KyneticHaze/Notes/blob/master/projects_diagrams/clean_arch.png" width="300">
+  <img src="https://github.com/KyneticHaze/Notes/blob/master/projects_diagrams/service_diagram.png" width="300">
+  <img src="https://github.com/KyneticHaze/Notes/blob/master/projects_diagrams/newsCard.png" width="300">
+  <img src="https://github.com/KyneticHaze/Notes/blob/master/projects_diagrams/mapDetail.png" width="300">
+  <img src="https://github.com/KyneticHaze/Notes/blob/master/projects_diagrams/agentCard.png" width="300">
+  <img src="https://github.com/KyneticHaze/Notes/blob/master/projects_diagrams/abilityCard.png" width="300">
 </div>
