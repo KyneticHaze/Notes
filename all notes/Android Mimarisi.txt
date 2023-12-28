@@ -1,0 +1,53 @@
+Android Mimarisi
+
+Endişelerin ayrılması prensibi düstur alınarak oluşturulan uygulamalarda iki katman yer alır. Kullanıcı verilerinin görünüme kavuşarak kullanıcının etkileşimine sunulan kullanıcı arayüzü katmanı, Uygulamanın iş mantığını ve uygulama verilerini tutan veri katmanı.
+
+Uygulama karmaşıklaştıkça iş mantığı veri katmanından ayrılarak alan katmanında işlenmeye başlar.
+
+Modern Uygulama Mimarisinde
+
+- Tek yönlü veri akışı
+
+- Kullanıcı arayüzünün karmaşıklığını yönetmek için durum tutucular bulunması
+
+- Eş yordamlar ve akışlar
+
+- Bağımlılık enjeksiyonu için en iyi öneriler
+
+Kullanıcı Arayüzü Katmanı -> Rolü, uygulama verilerini ekranda görüntülemektir.
+
+Kullanıcı etkileşimi ve networking, database işlemleri gibi işlerde veriler her değiştiğinde kullanıcı arayüzü değişiklikleri yanıstacak şekilde güncellenir.
+
+- Kullanıcı arayüzü ögeleri (XML View - Jetpack Compose)
+
+- Verileri tutan ve mantık işleyen durum tutucular (ViewModel gibi)
+
+
+Veri Katmanı -> Uygulamamızın verileri nasıl oluşturduğunu, sakladığını ve değiştirdiğini belirleyen kurallardan oluşur.
+
+Uygulamada işlediğimiz her veri türü için bir depo sınıfı gerekir.
+
+Depo sınıfları :
+
+- Verilerdeki değişiklikleri merkezileştirme
+
+- Birden çok veri kaynağı arasındaki çakışmaları çözme
+
+- Veri kaynaklarını soyutlama
+
+- İş mantığını içerme (opsiyonel)
+
+
+Alan Katmanı -> Karmaşık iş mantığını ve birden fazla viewmodel tarafından yeniden kullanılan iş mantığını kapsamaktan sorumludur. Bu gereksinimler her uygulamada bulunmadığından bu katman isteğe bağlıdır. Yeniden kullanılabilirliği olan ve karmaşıklığı bulunan uygulamaları yönetmek için kullanılmalı.
+
+En iyi uygulamalar için öneriler
+
+- Uygulama bileşenlerinde veri depolamayın
+
+- Bağımlılıkları azaltın
+
+- Moduller arası iyi tanımlanmış sorumluluk sınırları koyun
+
+- Uygulamanın temelini benzersiz şekilde oluşturun
+
+- Uygulamanın her bir bölümünü test edilmesi kolay hale getirin

@@ -1,0 +1,31 @@
+Android SDK
+
+SDK, Uygulamayı üretmeyi sağlayan yazılım geliştirme araçlarından oluşan bir çeşit yazılımdır.
+
+Bir API'yi bir programlama diliyle konuşturmayı sağlayan yapı da olabilir.
+
+SDK -> 1 - Hata Ayıklama
+
+       2 - Diğer yardımcı programlar
+
+       3 - Genelde IDE'de bulunur
+
+Bir API yazılımın diğer yazılımlarla iletişim kurmasını sağlar.
+
+Android SDK
+
+Android işletim sistemini kullanan tüm cihazlarda yeni bir uygulama çalıştırması için Android Sdk kullanmak gerekir.
+
+SDK neleri içerir?
+
+- Kod örnekleri
+
+- Yol gösteren kılavuzlar
+
+- İki uygulamayı birbirleriyle iletişimde olmasını sağlayan API'lar
+
+- Belgeler / Dokümanlar
+
+- Test Araçları
+
+- Extra plugin, fonksiyon ve yazılım araçları
