@@ -1,6 +1,6 @@
 # Notes
 
-> Bu repo, android öğrenimim ve proje üretme süreçlerim boyunca aldığım notlardan oluşuyor.
+> Bu repo, Android öğrenimim ve proje üretme süreçlerim boyunca aldığım notlardan oluşuyor.
 
 ## O zamannnn linkleri bırakayım ⬇️
 
@@ -66,3 +66,7 @@
   <img src="https://github.com/KyneticHaze/Notes/blob/master/projects_diagrams/agentCard.png" width="300">
   <img src="https://github.com/KyneticHaze/Notes/blob/master/projects_diagrams/abilityCard.png" width="300">
 </div>
+
+
+# Android Yol Haritası
+![Yol Haritası](https://github.com/KyneticHaze/Notes/blob/master/android_developer_roadmap.png)
